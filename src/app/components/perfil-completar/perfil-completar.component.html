@@ -1,0 +1,39 @@
+<div class="perfil-container">
+    <h2>Inicia sesión para completar tu perfil</h2>
+    
+    <form *ngIf="!loggedIn" (ngSubmit)="login()">
+      <label for="username">Usuario</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required />
+  
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required />
+  
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+  
+    <div *ngIf="loggedIn">
+      <h3>Completa tu perfil</h3>
+      <form (ngSubmit)="submitProfile()">
+        <label for="name">Nombre Completo</label>
+        <input type="text" id="name" [(ngModel)]="profile.name" name="name" required />
+  
+        <label for="jobTitle">Profesión</label>
+        <input type="text" id="jobTitle" [(ngModel)]="profile.jobTitle" name="jobTitle" required />
+  
+        <label for="description">Descripción</label>
+        <textarea id="description" [(ngModel)]="profile.description" name="description" required></textarea>
+  
+        <label for="phone">Teléfono</label>
+        <input type="text" id="phone" [(ngModel)]="profile.phone" name="phone" required />
+  
+        <label for="location">Ubicación</label>
+        <input type="text" id="location" [(ngModel)]="profile.location" name="location" required />
+  
+        <label for="imageUrl">URL de la Foto</label>
+        <input type="text" id="imageUrl" [(ngModel)]="profile.imageUrl" name="imageUrl" />
+  
+        <button type="submit">Guardar Perfil</button>
+      </form>
+    </div>
+  </div>
+  

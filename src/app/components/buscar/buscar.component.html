@@ -1,0 +1,7 @@
+<div class="search-container">
+  <input type="text" placeholder="Cargo o categoría" [(ngModel)]="searchQuery.cargo" />
+  <input type="text" placeholder="Lugar" [(ngModel)]="searchQuery.lugar" />
+  <button (click)="onSearch()">
+    <i class="fas fa-search"></i> Buscar Servicio
+  </button>
+</div>

@@ -1,0 +1,25 @@
+{
+  "profiles": [
+    {
+      "id": "1",
+      "name": "Juan Pérez",
+      "jobTitle": "Desarrollador Web",
+      "imageUrl": "URL_DE_IMAGEN"
+    },
+    {
+      "id": "2",
+      "name": "María García",
+      "jobTitle": "Diseñadora Gráfica",
+      "imageUrl": "URL_DE_IMAGEN"
+    },
+    {
+      "id": 1730875608919,
+      "name": "Camilo Martinez",
+      "jobTitle": "Profesor",
+      "description": "",
+      "phone": "2926534",
+      "location": "Chapinero",
+      "imageUrl": ""
+    }
+  ]
+}

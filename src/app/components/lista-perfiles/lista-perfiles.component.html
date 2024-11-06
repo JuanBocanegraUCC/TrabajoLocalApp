@@ -1,0 +1,13 @@
+<app-buscar (searchEvent)="onSearch($event)"></app-buscar>
+<div class="profiles-container">
+  <h2><span>RESULTADOS</span></h2>
+  <div class="profiles">
+    <div class="profile" *ngFor="let profile of filteredProfiles">
+      <img src="assets/img/userIcon.png" alt="Foto de perfil de {{ profile.name }}" />
+      <h3>{{ profile.name }}</h3>
+      <p>{{ profile.jobTitle }}</p>
+      <button (click)="editProfile(profile.id)">Editar</button>
+      <button (click)="deleteProfile(profile.id)">Eliminar</button>
+    </div>
+  </div>
+</div>
