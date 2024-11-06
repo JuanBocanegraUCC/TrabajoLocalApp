@@ -1,7 +1,21 @@
-<div class="search-container">
-  <input type="text" placeholder="Cargo o categoría" [(ngModel)]="searchQuery.cargo" />
-  <input type="text" placeholder="Lugar" [(ngModel)]="searchQuery.lugar" />
-  <button (click)="onSearch()">
-    <i class="fas fa-search"></i> Buscar Servicio
-  </button>
+<div class="hero-section">
+  <h1>Ayuda confiable para tareas locales</h1>
+  <div class="search-container">
+    <input type="text" placeholder="Cargo o categoría" [(ngModel)]="searchQuery.jobTitle" />
+    <input type="text" placeholder="Lugar" [(ngModel)]="searchQuery.location" />
+    <button (click)="onSearch()">
+      <i class="fas fa-search"></i> Buscar Servicio
+    </button>
+  </div>
+</div>
+
+<div class="services-icons">
+  <div class="service-icon">
+    <img src="assets/img/Profesion.png" alt="Servicio Profesión" width="55" height="55" />
+    <p>Profesiones</p>
+  </div>
+  <div class="service-icon">
+    <img src="assets/img/Reparacion.png" alt="Servicio Reparación" width="60" height="55" />
+    <p>Reparación</p>
+  </div>
 </div>

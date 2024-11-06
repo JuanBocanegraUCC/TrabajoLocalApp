@@ -6,8 +6,14 @@
       <img src="assets/img/userIcon.png" alt="Foto de perfil de {{ profile.name }}" />
       <h3>{{ profile.name }}</h3>
       <p>{{ profile.jobTitle }}</p>
-      <button (click)="editProfile(profile.id)">Editar</button>
-      <button (click)="deleteProfile(profile.id)">Eliminar</button>
+      <p>{{ profile.location }}</p>
+      <button (click)="openProfilePopup(profile)">Ver Perfil</button>
     </div>
   </div>
 </div>
+
+<app-perfil-popup 
+  *ngIf="selectedProfile" 
+  [profile]="selectedProfile" 
+  (close)="closeProfilePopup()">
+</app-perfil-popup>

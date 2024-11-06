@@ -1,0 +1,23 @@
+<div class="popup-backdrop" (click)="closePopup()"></div>
+<div class="popup-content">
+  <button class="close-btn" (click)="closePopup()">×</button>
+  <img src="assets/img/userIcon.png" alt="Foto de perfil de {{ profile?.name }}" />
+  <h3>{{ profile?.name }}</h3>
+  <p>Soy: {{ profile?.jobTitle }}</p>
+  <p>Me encuentro en: {{ profile?.location }}</p>
+  <p>Contáctame aquí: {{ profile?.phone }}</p>
+  <p>Mi experiencia: {{ profile?.description }}</p>
+
+  <h4>Calificación:</h4>
+  <div class="rating">
+    <i *ngFor="let star of [1, 2, 3, 4, 5]" 
+       class="fas fa-star" 
+       [class.selected]="star <= rating" 
+       (click)="setRating(star)"></i>
+  </div>
+
+  <h4>Comentario:</h4>
+  <textarea [(ngModel)]="comment" placeholder="Escribe tu comentario aquí"></textarea>
+
+  <button (click)="submitReview()">Enviar</button>
+</div>

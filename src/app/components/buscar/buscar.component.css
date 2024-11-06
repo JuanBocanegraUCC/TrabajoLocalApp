@@ -1,25 +1,61 @@
+.hero-section {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
 .search-container {
-    padding: 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-  }
-  .search-container input {
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  .search-container button {
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #003366;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .search-container button i {
-    margin-right: 10px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-container input {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.search-container button {
+  padding: 15px 20px;
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-container button i {
+  margin-right: 5px;
+}
+
+.services-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.services-icons .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.services-icons .icon i {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 10px;
+}

@@ -9,6 +9,7 @@ import { PerfilService } from '../../services/perfil.service';
 export class ListaPerfilesComponent implements OnInit {
   profiles: any[] = [];
   filteredProfiles: any[] = [];
+  selectedProfile: any = null;
 
   constructor(private perfilService: PerfilService) {}
 
@@ -23,22 +24,24 @@ export class ListaPerfilesComponent implements OnInit {
     });
   }
 
-  onFilter(query: { cargo: string; lugar: string }) {
+  onSearch(query: { jobTitle: string; location: string }) {
     this.filteredProfiles = this.profiles.filter(profile =>
-      profile.jobTitle.toLowerCase().includes(query.cargo.toLowerCase()) &&
-      profile.location.toLowerCase().includes(query.lugar.toLowerCase())
+      (profile.jobTitle?.toLowerCase() || '').includes(query.jobTitle.toLowerCase()) &&
+      (profile.location?.toLowerCase() || '').includes(query.location.toLowerCase())
     );
   }
 
-  editProfile(id: number) {
-  }
-  
   deleteProfile(id: number) {
     this.perfilService.deleteProfile(id).subscribe(() => {
       this.loadProfiles();
     });
   }
 
-  onSearch(query: { cargo: string, lugar: string }) {
+  openProfilePopup(profile: any) {
+    this.selectedProfile = profile;
+  }
+
+  closeProfilePopup() {
+    this.selectedProfile = null;
   }
 }

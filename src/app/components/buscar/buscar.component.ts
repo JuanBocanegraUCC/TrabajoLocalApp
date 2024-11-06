@@ -6,9 +6,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./buscar.component.css']
 })
 export class BuscarComponent implements OnInit {
-  searchQuery = { cargo: '', lugar: '' };
+  searchQuery = { jobTitle: '', location: '' };
   
-  @Output() searchEvent = new EventEmitter<{ cargo: string; lugar: string }>();
+  @Output() searchEvent = new EventEmitter<{ jobTitle: string; location: string }>();
 
   constructor() {}
 

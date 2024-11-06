@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
 import { ListaPerfilesComponent } from './components/lista-perfiles/lista-perfiles.component';
 import { PerfilCompletarComponent } from './components/perfil-completar/perfil-completar.component';
+import { PerfilPopupComponent } from './perfil-popup/perfil-popup.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PerfilCompletarComponent } from './components/perfil-completar/perfil-c
     HeaderComponent,
     BuscarComponent,
     ListaPerfilesComponent,
-    PerfilCompletarComponent
+    PerfilCompletarComponent,
+    PerfilPopupComponent
   ],
   imports: [
     BrowserModule,
